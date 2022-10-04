@@ -1,11 +1,9 @@
 import styles from './Books.css';
 import { Link, Outlet } from 'react-router-dom';
-import Header from '../Page/Header';
 
 export default function Books() {
   return (
     <div className={styles.Books}>
-      <Header />
       <h1>Books</h1>
       <nav>
         <Link to="breathe">Breathe</Link>
