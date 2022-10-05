@@ -1,4 +1,4 @@
-
+import styles from './FormParts.css';
 
 function FormPart({ children, className, label }) {
   return (
@@ -11,7 +11,7 @@ function FormPart({ children, className, label }) {
 
 export function LabelText({ text }) {
   return (
-    <label className="label-text">
+    <label className={styles.LabelText}>
       {text}
     </label>
   );
@@ -37,23 +37,20 @@ export function Select({ label, name, value, children }) {
   ); 
 }
 
-// export function SelectFruit() {
-//   return (
-//     <FormPart label="Pick a Fruit" className="select-fruit" >
-//       <select name="fruit">
-//         <option value="apple">Apple</option>
-//         <option value="orange">Orange</option>
-//         <option value="banana">Banana</option>
-//       </select>
-//     </FormPart>
-//   );
-// }
 
-export function Checkbox({ legend }) {
+export function TextArea({ label, name, placeholder }) {
   return (
-    <FormPart label={legend} className="checkbox">
+    <FormPart label={label} className="TextArea">
+      <textarea name={name} placeholder={placeholder} />
+    </FormPart>
+  );
+}
+
+export function Checkbox({ legend, name }) {
+  return (
+    <FormPart className="checkbox">
       <legend>{legend}
-        <input type="checkbox" name="checkbox" />
+        <input type="checkbox" name={name} />
       </legend>
     </FormPart>
   );
