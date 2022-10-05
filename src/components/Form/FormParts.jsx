@@ -11,33 +11,37 @@ function FormPart({ children, className, label }) {
   );
 }
 
-export function UsernameInput() {
+export function Input({ type, name, placeholder, label }) {
   return (
-    <FormPart label="Username" className="username-input" >
-      <input type="text" name="username" placeholder="Username" />
+    <FormPart label={label} className="Input" >
+      <input type={type} name={name} placeholder={placeholder} />
     </FormPart>
   );
 }
+// Input will take in type props and pass it in
 
-export function PasswordInput() {
-  return (
-    <FormPart label="Password" className="password-input" >
-      <input type="password" name="password" placeholder="Password" />
-    </FormPart>
-  );
-}
 
-export function SelectFruit() {
+export function Select({ label, name, value, children }) {
   return (
-    <FormPart label="Pick a Fruit" className="select-fruit" >
-      <select name="fruit">
-        <option value="apple">Apple</option>
-        <option value="orange">Orange</option>
-        <option value="banana">Banana</option>
+    <FormPart label={label} className="Select">
+      <select name={name} value={value}>
+        {children}
       </select>
     </FormPart>
-  );
+  ); 
 }
+
+// export function SelectFruit() {
+//   return (
+//     <FormPart label="Pick a Fruit" className="select-fruit" >
+//       <select name="fruit">
+//         <option value="apple">Apple</option>
+//         <option value="orange">Orange</option>
+//         <option value="banana">Banana</option>
+//       </select>
+//     </FormPart>
+//   );
+// }
 
 export function CatPerson({ legend }) {
   return (

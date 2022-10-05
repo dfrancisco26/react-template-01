@@ -1,5 +1,5 @@
 import {
-  UsernameInput,
+  Input,
   PasswordInput,
   SelectFruit,
   CatPerson,
@@ -9,8 +9,17 @@ import {
 export default function Form() {
   return (
     <form>
-      <UsernameInput />
-      <PasswordInput />
+      <Input
+        label="Username"
+        type="text"
+        name="username"
+        placeholder="Username" />
+      <Input
+        label="Password"
+        type="password"
+        name="pasword"
+        placeholder="Password" />
+        
       <SelectFruit />
       <CatPerson />
       <SubmitButton />
