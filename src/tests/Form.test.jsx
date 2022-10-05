@@ -21,3 +21,4 @@ test('renders select and takes in props', () => {
   expect(selectFruit.name).toBe('fruit');
   expect(selectFruit.value).toBe('apple');
 });
+

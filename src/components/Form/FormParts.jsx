@@ -2,12 +2,18 @@
 
 function FormPart({ children, className, label }) {
   return (
-    <div className={className}>
-      <label>
-        {label}
-        {children}
-      </label>
-    </div>
+    <label className={className}>
+      <LabelText text={label} />
+      {children}
+    </label>
+  );
+}
+
+export function LabelText({ text }) {
+  return (
+    <label className="label-text">
+      {text}
+    </label>
   );
 }
 
@@ -43,16 +49,13 @@ export function Select({ label, name, value, children }) {
 //   );
 // }
 
-export function CatPerson({ legend }) {
+export function Checkbox({ legend }) {
   return (
-    <div>
-      <label>
-        <legend>{legend}
-          <input type="checkbox" name="cat-person" />
-        </legend>
-            Are you a cat person?
-      </label>
-    </div>
+    <FormPart label={legend} className="checkbox">
+      <legend>{legend}
+        <input type="checkbox" name="checkbox" />
+      </legend>
+    </FormPart>
   );
 }
 
