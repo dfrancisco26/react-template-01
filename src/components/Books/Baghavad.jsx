@@ -3,5 +3,5 @@ export default function Baghavad() {
     <div>
       <h1>Baghavad Gita</h1>
     </div>
-  );
+  );  
 }

@@ -10,6 +10,7 @@ import Breathe from './Books/Breathe';
 import Baghavad from './Books/Baghavad';
 import Games from './Games/Games';
 import Layout from './Page/Layout';
+import Form from './Form/Form';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="form" element={<Form />} />
           <Route path="games" element={<Games />} />
           <Route path="books" element={<Books />} >
             <Route path="born" element={<Born />} />
