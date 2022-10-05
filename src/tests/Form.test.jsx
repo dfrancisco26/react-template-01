@@ -1,5 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import { Input, Select, Checkbox } from '../components/Form/FormParts';
+import {
+  Input,
+  Select,
+  Checkbox,
+  TextArea
+} from '../components/Form/FormParts';
 
 test('renders input and takes in props', () => {
   render(<Input type="text"
