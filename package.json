@@ -2,7 +2,7 @@
   "name": "my-react-template",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/index.jsx",
   "scripts": {
     "test": "exit 0",
     "lint": "eslint --ext js --ext jsx src",
